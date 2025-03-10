@@ -1,0 +1,112 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 60vh;
+    /* فضای اسکرول */
+    background-color: #000;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+.items {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    perspective: 900px;
+    transform-style: preserve-3d;
+}
+
+.image {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* تنظیم عمق برای افکت پارالکس */
+[data-key="1"] {
+    background-image: url("./new/parallax0.png");
+    transform: translateZ(-20px) scale(4);
+}
+
+[data-key="2"] {
+    background-image: url("./new/parallax1.png");
+    transform: translateZ(-20px) scale(3.5);
+}
+
+[data-key="4"] {
+    background-image: url("./new/parallax3.png");
+    transform: translateZ(-20px) scale(2.5);
+}
+
+[data-key="5"] {
+    background-image: url("./new/parallax4.png");
+    transform: translateZ(-30px) scale(2);
+}
+
+[data-key="6"] {
+    background-image: url("./new/parallax5.png");
+    transform: translateZ(-5px) scale(1.5);
+}
+
+[data-key="7"] {
+    background-image: url("./new/parallax6.png");
+    transform: translateZ(0px) scale(1);
+}
+
+[data-key="8"] {
+    background-image: url("./new/parallax7.png");
+    transform: translateZ(5px) scale();
+}
+
+[data-key="9"] {
+    background-image: url("./new/parallax8.png");
+    transform: translateZ(10px) ;
+}
+
+/* hidden overflow animation */
+.content {
+    position: absolute;
+    display: flex;
+    background: black;
+    color: white;
+    width: 100%;
+    height: 200vh;
+}
+.content > div > div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+.container > div {
+    display: flex;
+    justify-content: center;
+}
+.btn  {
+    padding: 8px 0;
+    width: 140px;
+    background-color: #ffaf1b;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: #ffb01eb6;
+}
